@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>TurboTycoon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              slate: {
+                900: '#0f172a',
+                800: '#1e293b',
+              },
+              neon: {
+                red: '#ef4444',
+                cyan: '#00FFD9',
+                yellow: '#FBBF24',
+                green: '#10B981',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['Space Mono', 'monospace'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #0f172a;
+        color: white;
+        touch-action: manipulation;
+        overscroll-behavior: none;
+      }
+      /* Custom scrollbar for cleaner look */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1e293b;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #475569;
+        border-radius: 3px;
+      }
+      
+      /* --- Visual FX --- */
+      
+      /* Carbon Fiber Pattern */
+      .bg-carbon {
+        background-color: #0f172a;
+        background-image: 
+          linear-gradient(45deg, #0a0f1d 25%, transparent 25%, transparent 75%, #0a0f1d 75%, #0a0f1d),
+          linear-gradient(45deg, #0a0f1d 25%, transparent 25%, transparent 75%, #0a0f1d 75%, #0a0f1d);
+        background-size: 4px 4px;
+        background-position: 0 0, 2px 2px;
+      }
+
+      /* Tech Grid */
+      .bg-grid {
+        background-size: 40px 40px;
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      }
+
+      /* Scanlines */
+      .scanlines {
+        background: linear-gradient(
+          to bottom,
+          rgba(255,255,255,0),
+          rgba(255,255,255,0) 50%,
+          rgba(0,0,0,0.2) 50%,
+          rgba(0,0,0,0.2)
+        );
+        background-size: 100% 4px;
+        pointer-events: none;
+      }
+
+      /* Vignette */
+      .vignette {
+        background: radial-gradient(circle, transparent 40%, rgba(0,0,0,0.8) 100%);
+        pointer-events: none;
+      }
+      
+      /* Redline Pulse Animation */
+      @keyframes redline-flash {
+        0%, 100% { box-shadow: inset 0 0 0px rgba(239, 68, 68, 0); }
+        50% { box-shadow: inset 0 0 100px rgba(239, 68, 68, 0.5); }
+      }
+      
+      .animate-redline-flash {
+        animation: redline-flash 0.8s ease-in-out infinite;
+      }
+
+      .glass-panel {
+        background: rgba(15, 23, 42, 0.6);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
