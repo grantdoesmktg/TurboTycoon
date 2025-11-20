@@ -11,7 +11,10 @@
   "dependencies": {
     "lucide-react": "^0.554.0",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "react-native": "^0.82.1",
+    "expo-haptics": "^15.0.7",
+    "react-native-svg": "^15.15.0"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
